@@ -7,13 +7,13 @@ public class BrowserHistory {
 
     private Stack<String> history = new Stack<>();
 
-    // Tambah website ke history
+
     public void browse(String website) {
         history.push(website);
         System.out.println("Browsing: " + website);
     }
 
-    // Kembali ke website sebelumnya dan hapus history terbaru
+
     public void back() {
         if (history.size() <= 1) {
             System.out.println("Tidak bisa kembali! History kosong atau hanya ada satu item.");
@@ -25,7 +25,7 @@ public class BrowserHistory {
         System.out.println("Sekarang berada di: " + history.peek());
     }
 
-    // Menampilkan semua history (paling baru → paling lama)
+
     public void view() {
         if (history.isEmpty()) {
             System.out.println("History masih kosong!");
@@ -39,7 +39,7 @@ public class BrowserHistory {
         System.out.println("====================================\n");
     }
 
-    // MAIN PROGRAM
+    
     public static void main(String[] args) {
         BrowserHistory browser = new BrowserHistory();
         Scanner input = new Scanner(System.in);
